@@ -23,6 +23,29 @@ public class Calculator {
         return false;
     }
 
+    public void doMathOperation(String operation, int value) {
+        switch (operation){
+            case "add":
+                addOperation(value);
+                break;
+            case "minus":
+                minusOperation(value);
+                break;
+            case "subtract":
+                if (value == 0) {
+                    resetCalculator();
+                    break;
+                }
+                subtractOperation(value);
+                break;
+            case "multiply":
+                multiplyOperation(value);
+                break;
+            default:
+                break;
+        }
+    }
+
     @Override
     public String toString() {
         return String.format("%.1f", this.val);

@@ -63,5 +63,12 @@ public class CalculatorTest {
         assertTrue(calculatorClass.validateOperation("add"));
     }
 
-
+    @Test
+    public void testGiven_CalculatorApp_When_SelectMathOperation_Then_ChangeCalculatorValue(){
+        Calculator calculatorClass = new Calculator();
+        double initialValue = calculatorClass.val;
+        String operation = "add";
+        calculatorClass.doMathOperation(operation, 3);
+        assertNotEquals(String.format("%.1f", initialValue), calculatorClass.toString());
+    }
 }
