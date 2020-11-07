@@ -35,4 +35,12 @@ public class CalculatorTest {
         calculatorClass.minusOperation(2);
         assertEquals(String.format("%.1f", initialValue-2),calculatorClass.toString());
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_SubtractByTwo_Then_ValueIsHalfThanBefore() {
+        Calculator calculatorClass = new Calculator();
+        double initialValue = calculatorClass.val;
+        calculatorClass.subtractOperation(2);
+        assertEquals(String.format("%.1f", initialValue/2),calculatorClass.toString());
+    }
 }
