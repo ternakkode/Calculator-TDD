@@ -2,8 +2,7 @@ package com.ternakkode.calculator_tdd;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
@@ -50,5 +49,11 @@ public class CalculatorTest {
         double initialValue = calculatorClass.val;
         calculatorClass.multiplyOperation(2);
         assertEquals(String.format("%.1f", initialValue*2),calculatorClass.toString());
+    }
+
+    @Test
+    public void testGiven_CalculatorApp_When_SelectedOperationIsForResetValue_Then_ReturnTrue(){
+        Calculator calculatorClass = new Calculator();
+        assertTrue(calculatorClass.validateOperation("reset"));
     }
 }
