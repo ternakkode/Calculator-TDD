@@ -8,7 +8,7 @@ public class Calculator {
     String[] resetOperations = {"reset", "clear"};
     String[] calculationOptions = {"add", "subtract", "multiply", "divide"};
 
-    public boolean validateOperation(String operation) {
+    public boolean validateOperation(String operation, int value) {
         boolean isResetOperation = Arrays.asList(this.resetOperations).contains(operation);
         if (isResetOperation) {
             resetCalculator();
@@ -17,6 +17,7 @@ public class Calculator {
 
         boolean isCalculationOperation = Arrays.asList(this.calculationOptions).contains(operation);
         if (isCalculationOperation) {
+            doMathOperation(operation, value);
             return true;
         }
 
