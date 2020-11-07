@@ -19,4 +19,12 @@ public class CalculatorTest {
         calculatorClass.resetCalculator();
         assertEquals("0.0",calculatorClass.toString());
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_AddByTwo_Then_ValueTwoHigherFromBefore(){
+        Calculator calculatorClass = new Calculator();
+        double initialValue = calculatorClass.val;
+        calculatorClass.addOperation(2);
+        assertEquals(String.format("%.1f", initialValue+2),calculatorClass.toString());
+    }
 }
