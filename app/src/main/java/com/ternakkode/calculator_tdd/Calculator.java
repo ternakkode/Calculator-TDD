@@ -8,7 +8,7 @@ public class Calculator {
     String[] resetOperations = {"reset", "clear"};
     String[] calculationOptions = {"add", "subtract", "multiply", "divide"};
 
-    public String[] splitInputs(String input){
+    public String[] splitInputs(String input) {
         String[] inputs = input.split(" ");
 
         return inputs;
@@ -73,7 +73,7 @@ public class Calculator {
         this.val /= input;
     }
 
-    public void multiplyOperation(int input){
+    public void multiplyOperation(int input) {
         this.val *= input;
     }
 

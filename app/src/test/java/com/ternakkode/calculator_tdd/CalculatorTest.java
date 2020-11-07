@@ -52,7 +52,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testGiven_CalculatorApp_When_SelectedOperationIsForResetValue_Then_ReturnTrue(){
+    public void testGiven_CalculatorApp_When_SelectedOperationIsForResetValue_Then_ReturnTrue() {
         Calculator calculatorClass = new Calculator();
         assertTrue(calculatorClass.validateOperation("reset"));
     }
@@ -64,7 +64,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testGiven_CalculatorApp_When_SelectMathOperation_Then_ChangeCalculatorValue(){
+    public void testGiven_CalculatorApp_When_SelectMathOperation_Then_ChangeCalculatorValue() {
         Calculator calculatorClass = new Calculator();
         double initialValue = calculatorClass.val;
         String operation = "add";
@@ -73,7 +73,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testGiven_CalculatorApp_When_CallSplitInputFunction_Then_SplittingInputToArray(){
+    public void testGiven_CalculatorApp_When_CallSplitInputFunction_Then_SplittingInputToArray() {
         Calculator calculatorClass = new Calculator();
         String[] splittedInput = calculatorClass.splitInputs("add 2");
         assertEquals(2, splittedInput.length);
