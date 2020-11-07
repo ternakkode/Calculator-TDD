@@ -54,13 +54,13 @@ public class CalculatorTest {
     @Test
     public void testGiven_CalculatorApp_When_SelectedOperationIsForResetValue_Then_ReturnTrue(){
         Calculator calculatorClass = new Calculator();
-        assertTrue(calculatorClass.validateOperation("reset", 0));
+        assertTrue(calculatorClass.validateOperation("reset"));
     }
 
     @Test
     public void testGiven_CalculatorApp_When_SelectedOperationIsForCalculation_Then_ReturnTrue() {
         Calculator calculatorClass = new Calculator();
-        assertTrue(calculatorClass.validateOperation("add", 0));
+        assertTrue(calculatorClass.validateOperation("add 2"));
     }
 
     @Test

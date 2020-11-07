@@ -14,15 +14,18 @@ public class Calculator {
         return inputs;
     }
 
-    public boolean validateOperation(String operation, int value) {
-        boolean isResetOperation = Arrays.asList(this.resetOperations).contains(operation);
+    public boolean validateOperation(String input) {
+        boolean isResetOperation = Arrays.asList(this.resetOperations).contains(input);
         if (isResetOperation) {
             resetCalculator();
             return true;
         }
 
+        String[] inputs = splitInputs(input);
+        String operation = inputs[0];
         boolean isCalculationOperation = Arrays.asList(this.calculationOptions).contains(operation);
-        if (isCalculationOperation) {
+        if (isCalculationOperation & inputs.length > 1) {
+            int value = Integer.parseInt(inputs[1]);
             doMathOperation(operation, value);
             return true;
         }
