@@ -78,4 +78,10 @@ public class CalculatorTest {
         String[] splittedInput = calculatorClass.splitInputs("add 2");
         assertEquals(2, splittedInput.length);
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_DependencyInjectionOnCalculator_Then_CanCallCalculatorObject() {
+        Main mainClass = new Main(new Calculator());
+        assertEquals("0.0", mainClass.calculatorService.toString());
+    }
 }
