@@ -6,12 +6,21 @@ public class Calculator {
 
     double val = 0.0;
     String[] resetOperations = {"reset", "clear"};
+    String[] calculationOptions = {"add", "subtract", "multiply", "divide"};
 
     public boolean validateOperation(String operation) {
         boolean isResetOperation = Arrays.asList(this.resetOperations).contains(operation);
-        if (isResetOperation) resetCalculator();
+        if (isResetOperation) {
+            resetCalculator();
+            return true;
+        }
 
-        return true;
+        boolean isCalculationOperation = Arrays.asList(this.calculationOptions).contains(operation);
+        if (isCalculationOperation) {
+            return true;
+        }
+
+        return false;
     }
 
     @Override

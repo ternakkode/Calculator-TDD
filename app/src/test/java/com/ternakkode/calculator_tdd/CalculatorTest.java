@@ -56,4 +56,12 @@ public class CalculatorTest {
         Calculator calculatorClass = new Calculator();
         assertTrue(calculatorClass.validateOperation("reset"));
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_SelectedOperationIsForCalculation_Then_ReturnTrue() {
+        Calculator calculatorClass = new Calculator();
+        assertTrue(calculatorClass.validateOperation("add"));
+    }
+
+
 }
