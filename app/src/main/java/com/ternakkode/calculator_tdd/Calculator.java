@@ -8,4 +8,8 @@ public class Calculator {
     public String toString() {
         return String.format("%.1f", this.val);
     }
+
+    public void resetCalculator(){
+        this.val = 0.0;
+    }
 }
