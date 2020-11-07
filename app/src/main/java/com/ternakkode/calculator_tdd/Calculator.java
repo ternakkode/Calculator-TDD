@@ -13,6 +13,10 @@ public class Calculator {
         this.val += input;
     }
 
+    public void minusOperation(int input) {
+        this.val -= input;
+    }
+
     public void resetCalculator() {
         this.val = 0.0;
     }

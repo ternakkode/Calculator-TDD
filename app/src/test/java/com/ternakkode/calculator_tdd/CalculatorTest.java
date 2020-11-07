@@ -27,4 +27,12 @@ public class CalculatorTest {
         calculatorClass.addOperation(2);
         assertEquals(String.format("%.1f", initialValue+2),calculatorClass.toString());
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_MinusByTwo_Then_ValueTwoLowerThanBefore() {
+        Calculator calculatorClass = new Calculator();
+        double initialValue = calculatorClass.val;
+        calculatorClass.minusOperation(2);
+        assertEquals(String.format("%.1f", initialValue-2),calculatorClass.toString());
+    }
 }
