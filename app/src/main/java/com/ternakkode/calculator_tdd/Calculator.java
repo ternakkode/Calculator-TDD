@@ -21,6 +21,10 @@ public class Calculator {
         this.val /= input;
     }
 
+    public void multiplyOperation(int input){
+        this.val *= input;
+    }
+
     public void resetCalculator() {
         this.val = 0.0;
     }

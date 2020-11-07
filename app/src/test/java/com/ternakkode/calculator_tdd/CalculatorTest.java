@@ -43,4 +43,12 @@ public class CalculatorTest {
         calculatorClass.subtractOperation(2);
         assertEquals(String.format("%.1f", initialValue/2),calculatorClass.toString());
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_MultiplyByTwo_Then_ValueIsTwiceThanBefore() {
+        Calculator calculatorClass = new Calculator();
+        double initialValue = calculatorClass.val;
+        calculatorClass.multiplyOperation(2);
+        assertEquals(String.format("%.1f", initialValue*2),calculatorClass.toString());
+    }
 }
