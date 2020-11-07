@@ -71,4 +71,11 @@ public class CalculatorTest {
         calculatorClass.doMathOperation(operation, 3);
         assertNotEquals(String.format("%.1f", initialValue), calculatorClass.toString());
     }
+
+    @Test
+    public void testGiven_CalculatorApp_When_CallSplitInputFunction_Then_SplittingInputToArray(){
+        Calculator calculatorClass = new Calculator();
+        String[] splittedInput = calculatorClass.splitInputs("add 2");
+        assertEquals(2, splittedInput.length);
+    }
 }

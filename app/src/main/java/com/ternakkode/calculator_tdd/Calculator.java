@@ -8,6 +8,12 @@ public class Calculator {
     String[] resetOperations = {"reset", "clear"};
     String[] calculationOptions = {"add", "subtract", "multiply", "divide"};
 
+    public String[] splitInputs(String input){
+        String[] inputs = input.split(" ");
+
+        return inputs;
+    }
+
     public boolean validateOperation(String operation, int value) {
         boolean isResetOperation = Arrays.asList(this.resetOperations).contains(operation);
         if (isResetOperation) {
