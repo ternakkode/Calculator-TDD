@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotNull;
 public class CalculatorTest {
 
     @Test
-    public void testGiven_CalculatorApp_When_Output_Then_PrintValue(){
+    public void testGiven_CalculatorApp_When_Output_Then_PrintValue() {
         Calculator calculatorClass = new Calculator();
         assertNotNull(calculatorClass.toString());
     }
@@ -21,7 +21,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testGiven_CalculatorApp_When_AddByTwo_Then_ValueTwoHigherFromBefore(){
+    public void testGiven_CalculatorApp_When_AddByTwo_Then_ValueTwoHigherFromBefore() {
         Calculator calculatorClass = new Calculator();
         double initialValue = calculatorClass.val;
         calculatorClass.addOperation(2);
