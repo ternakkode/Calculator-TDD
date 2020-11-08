@@ -20,7 +20,7 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testGiven_CalculatorApp_When_AddByTwo_Then_ValueTwoHigherFromBefore() {
+    public void testGiven_CalculatorApp_When_AddByTwo_Then_ValueTwoHigherThanBefore() {
         Calculator calculatorClass = new Calculator();
         double initialValue = calculatorClass.val;
         calculatorClass.addOperation(2);
